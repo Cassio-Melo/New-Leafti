@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeafTi - Cadastro</title>
+  <link rel="shortcut icon" href="images/logosemfundo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body class="bg-light d-flex align-items-center justify-content-center min-vh-100 py-5">
+
+  <div class="card border-0 shadow-sm p-4 w-100" style="max-width: 550px;">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="fw-bold m-0">Cadastro</h2>
+      <a href="quemsomos.html"><img src="images/logofolha.png" alt="Logo" width="40"></a>
+    </div>
+
+    <form id="signup-form" action="index.html" method="GET">
+      <div class="mb-3">
+        <label class="form-label d-block fw-bold">Tipo de Instituição</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="tipoInstituicao" id="radioEmpresa" checked>
+          <label class="form-check-label" for="radioEmpresa">Empresa</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="tipoInstituicao" id="radioOng">
+          <label class="form-check-label" for="radioOng">ONG</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="username" class="form-label fw-bold">Nome da Empresa/ONG</label>
+        <input type="text" class="form-control" id="username" placeholder="Ex: Caxias Do Sul Corp." required>
+      </div>
+
+      <div class="row g-3 mb-3">
+        <div class="col-sm-6">
+          <label for="CNPJ" class="form-label fw-bold">Digite o CNPJ</label>
+          <input type="text" class="form-control" id="CNPJ" placeholder="00.000.000/0001-00" required>
+        </div>
+        <div class="col-sm-6">
+          <label for="CCNPJ" class="form-label fw-bold">Confirme o CNPJ</label>
+          <input type="text" class="form-control" id="CCNPJ" placeholder="00.000.000/0001-00" required>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-3">
+        <div class="col-sm-6">
+          <label for="Email" class="form-label fw-bold">E-mail</label>
+          <input type="email" class="form-control" id="Email" placeholder="nome@empresa.com" required>
+        </div>
+        <div class="col-sm-6">
+          <label for="CEmail" class="form-label fw-bold">Confirme o E-mail</label>
+          <input type="email" class="form-control" id="CEmail" placeholder="nome@empresa.com" required>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-3">
+        <div class="col-sm-6">
+          <label for="password" class="form-label fw-bold">Senha</label>
+          <input type="password" class="form-control" id="password" placeholder="********" required>
+        </div>
+        <div class="col-sm-6">
+          <label for="cpassword" class="form-label fw-bold">Confirme a Senha</label>
+          <input type="password" class="form-control" id="cpassword" placeholder="********" required>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-3">
+        <div class="col-sm-6">
+          <label for="Telefone" class="form-label fw-bold">Telefone</label>
+          <input type="text" class="form-control" id="Telefone" placeholder="(11) 99999-9999" required>
+        </div>
+        <div class="col-sm-6">
+          <label for="cTelefone" class="form-label fw-bold">Confirme o Telefone</label>
+          <input type="text" class="form-control" id="cTelefone" placeholder="(11) 99999-9999" required>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label for="Estado" class="form-label fw-bold">Estado</label>
+        <select class="form-select" id="Estado" required>
+          <option value="" disabled selected>Selecione seu Estado</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-success w-100 py-2 fw-bold">Cadastrar</button>
+    </form>
+    
+    <div class="text-center mt-3">
+      <a href="login.html" class="text-success text-decoration-none small">Já tem uma conta? Voltar ao Login</a>
+    </div>
+    <p id="error-message" class="text-danger small mt-2 text-center"></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/cadastro.js"></script>
+</body>
+</html>

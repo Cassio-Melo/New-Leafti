@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeafTi - Equipamentos</title>
+  <link rel="shortcut icon" href="images/logosemfundo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body class="bg-light">
+
+  <header class="sticky-top bg-white border-bottom border-light">
+    <nav class="navbar navbar-expand-lg navbar-light container">
+      <a class="navbar-brand" href="index.html"><img src="images/logo vertical.png" width="50" alt="Logo"></a>
+      <div class="navbar-nav ms-auto"><a class="nav-link" href="index.html">Início</a></div>
+    </nav>
+  </header>
+
+  <div class="container-fluid my-5 px-lg-5">
+    <div class="row g-4">
+      
+      <aside class="col-md-4 col-lg-3">
+        <div class="filter-sidebar">
+          <h5 class="fw-bold mb-3"><i class="fas fa-filter me-2"></i>Filtros</h5>
+          <form id="formfiltro">
+            <div class="mb-3"><input type="text" class="form-control border-0" placeholder="Pesquisar..."></div>
+            <div class="mb-4">
+              <select class="form-select border-0" name="empresas">
+                <option value="" selected>Filtrar Empresa</option>
+                <option value="itaú">Itaú</option>
+                <option value="high hopes">High Hopes</option>
+                <option value="tech dsd">Tech DSD</option>
+                <option value="desk br">Desk Br</option>
+                <option value="liftlife">LiftLife</option>
+                <option value="heartblits">HeartBlits</option>
+              </select>
+            </div>
+            <h6 class="fw-bold mb-2">Equipamentos</h6>
+            <div class="d-flex flex-column gap-2 small">
+              <label><input type="checkbox" class="form-check-input me-1"> Microfone</label>
+              <label><input type="checkbox" class="form-check-input me-1"> Teclado</label>
+              <label><input type="checkbox" class="form-check-input me-1"> Monitor</label>
+              <label><input type="checkbox" class="form-check-input me-1"> Mouse</label>
+              <label><input type="checkbox" class="form-check-input me-1"> Caixa de Som</label>
+              <label><input type="checkbox" class="form-check-input me-1"> Fone de Ouvido</label>
+            </div>
+          </form>
+        </div>
+      </aside>
+
+      <section class="col-md-8 col-lg-9">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4" id="cartoes">
+          
+          <div class="col">
+            <div class="card h-100 product-card p-2 text-center">
+              <div class="product-img-wrapper">
+                <img src="images/microfone.png" onerror="this.src='https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=250'" alt="Mic">
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h6 class="card-title fw-bold m-0 text-dark">Microfone - Fifine 150</h6>
+                <p class="text-muted small my-2">Empresa: Itaú</p>
+                <h5 class="text-success fw-bold mt-auto mb-3">R$ 1.500</h5>
+                <div class="d-flex gap-2">
+                  <a href="compra.html" class="btn btn-outline-dark btn-sm flex-grow-1">Comprar</a>
+                  <button class="btn btn-success btn-sm flex-grow-1" data-bs-toggle="modal" data-bs-target="#s1">Doação</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 product-card p-2 text-center">
+              <div class="product-img-wrapper">
+                <img src="images/teclado.png" onerror="this.src='https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=250'" alt="Teclado">
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h6 class="card-title fw-bold m-0 text-dark">Teclado Gamer - Furry</h6>
+                <p class="text-muted small my-2">Empresa: High Hopes</p>
+                <h5 class="text-success fw-bold mt-auto mb-3">R$ 700</h5>
+                <div class="d-flex gap-2">
+                  <a href="compra.html" class="btn btn-outline-dark btn-sm flex-grow-1">Comprar</a>
+                  <button class="btn btn-success btn-sm flex-grow-1" data-bs-toggle="modal" data-bs-target="#s2">Doação</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 product-card p-2 text-center">
+              <div class="product-img-wrapper">
+                <img src="images/monitor.png" onerror="this.src='https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=250'" alt="Monitor">
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h6 class="card-title fw-bold m-0 text-dark">Monitor - High Tech</h6>
+                <p class="text-muted small my-2">Empresa: Tech DSD</p>
+                <h5 class="text-success fw-bold mt-auto mb-3">R$ 900</h5>
+                <div class="d-flex gap-2">
+                  <a href="compra.html" class="btn btn-outline-dark btn-sm flex-grow-1">Comprar</a>
+                  <button class="btn btn-success btn-sm flex-grow-1" data-bs-toggle="modal" data-bs-target="#s3">Doação</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 product-card p-2 text-center">
+              <div class="product-img-wrapper">
+                <img src="images/mouse.png" onerror="this.src='https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?q=80&w=250'" alt="Mouse">
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h6 class="card-title fw-bold m-0 text-dark">Mouse - CX 85</h6>
+                <p class="text-muted small my-2">Empresa: Desk Br</p>
+                <h5 class="text-success fw-bold mt-auto mb-3">R$ 700</h5>
+                <div class="d-flex gap-2">
+                  <a href="compra.html" class="btn btn-outline-dark btn-sm flex-grow-1">Comprar</a>
+                  <button class="btn btn-success btn-sm flex-grow-1" data-bs-toggle="modal" data-bs-target="#s4">Doação</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 product-card p-2 text-center">
+              <div class="product-img-wrapper">
+                <img src="images/caixasom.png" onerror="this.src='https://images.unsplash.com/photo-1545454675-3531b543be5d?q=80&w=250'" alt="Som">
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h6 class="card-title fw-bold m-0 text-dark">Caixa de Som - Akf 435</h6>
+                <p class="text-muted small my-2">Empresa: LiftLife</p>
+                <h5 class="text-success fw-bold mt-auto mb-3">R$ 500</h5>
+                <div class="d-flex gap-2">
+                  <a href="compra.html" class="btn btn-outline-dark btn-sm flex-grow-1">Comprar</a>
+                  <button class="btn btn-success btn-sm flex-grow-1" data-bs-toggle="modal" data-bs-target="#s5">Doação</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 product-card p-2 text-center">
+              <div class="product-img-wrapper">
+                <img src="images/fone.png" onerror="this.src='https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=250'" alt="Fone">
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h6 class="card-title fw-bold m-0 text-dark">Fone de Ouvido - High light</h6>
+                <p class="text-muted small my-2">Empresa: HeartBlits</p>
+                <h5 class="text-success fw-bold mt-auto mb-3">R$ 500</h5>
+                <div class="d-flex gap-2">
+                  <a href="compra.html" class="btn btn-outline-dark btn-sm flex-grow-1">Comprar</a>
+                  <button class="btn btn-success btn-sm flex-grow-1" data-bs-toggle="modal" data-bs-target="#s6">Doação</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal fade" id="s1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content p-4 text-center"><h5>Solicitar Doação de Microfone?</h5><button class="btn btn-success w-100" data-bs-dismiss="modal">Confirmar</button></div></div>
+  </div>
+  <div class="modal fade" id="s2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content p-4 text-center"><h5>Solicitar Doação de Teclado?</h5><button class="btn btn-success w-100" data-bs-dismiss="modal">Confirmar</button></div></div>
+  </div>
+  <div class="modal fade" id="s3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content p-4 text-center"><h5>Solicitar Doação de Monitor?</h5><button class="btn btn-success w-100" data-bs-dismiss="modal">Confirmar</button></div></div>
+  </div>
+  <div class="modal fade" id="s4" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content p-4 text-center"><h5>Solicitar Doação de Mouse?</h5><button class="btn btn-success w-100" data-bs-dismiss="modal">Confirmar</button></div></div>
+  </div>
+  <div class="modal fade" id="s5" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content p-4 text-center"><h5>Solicitar Doação de Caixa de Som?</h5><button class="btn btn-success w-100" data-bs-dismiss="modal">Confirmar</button></div></div>
+  </div>
+  <div class="modal fade" id="s6" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content p-4 text-center"><h5>Solicitar Doação de Fone de Ouvido?</h5><button class="btn btn-success w-100" data-bs-dismiss="modal">Confirmar</button></div></div>
+  </div>
+
+  <footer class="bg-dark text-light pt-4 pb-2 text-center"><p class="m-0 small">&copy; 2026 Leaf TI - Todos os direitos reservados</p></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/att.js"></script>
+</body>
+</html>
